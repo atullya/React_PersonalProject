@@ -1,0 +1,9 @@
+.hs-carousel-body {
+    display: flex;
+    transition: transform 0.7s ease-in-out; /* Smooth transitions */
+  }
+  
+  .hs-carousel-slide {
+    width: 100%; /* Each slide takes full width */
+  }
+  
