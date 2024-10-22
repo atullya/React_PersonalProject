@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ModalForm from "./Modal/ModalForm";
-
+import logoo from "../assets/Image/logoo.png";
+import cart from "../assets/Image/cart.png";
 export default function Navbar() {
   // State to handle mobile menu visibility
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function Navbar() {
             role="navigation"
           >
             <NavLink to={"/"}>
-              <img src="../../Image/logoo.png" alt="Logo" width={140} />
+              <img src={logoo} alt="Logo" width={140} />
             </NavLink>
 
             <button
@@ -116,12 +117,7 @@ export default function Navbar() {
                   }
                 >
                   <span>
-                    <img
-                      src="../../public/Image/cart.png"
-                      alt="Cart"
-                      height={20}
-                      width={30}
-                    />
+                    <img src={cart} alt="Cart" height={20} width={30} />
                   </span>
                 </NavLink>
               </li>

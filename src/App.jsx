@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Service from "./Pages/Service"; // Ensure this is correctly imported
+import Service from "./Pages/Service";
 import Error from "./Pages/Error";
 import { ProductProvider } from "./ContextApi/ProductContext";
 import ProductDetail from "./Pages/ProductDetail";
@@ -15,6 +15,8 @@ import Weather from "./Pages/ServicePage/Weather/Weather";
 import { WeatherContextProvider } from "./ContextApi/WeatherContex";
 import ImageSearch from "./Pages/ServicePage/ImageSearch/ImageSearch";
 import { ImageContextProvider } from "./ContextApi/ImageContext";
+import ToDo from "./Pages/ServicePage/ToDo/ToDo";
+import { ToDoContextProvider } from "./ContextApi/ToDoContext";
 
 function App() {
   const allRoutes = createBrowserRouter([
@@ -27,14 +29,13 @@ function App() {
       element: <About />,
     },
     {
-      path: "services", // Correct route name
+      path: "services",
       element: <Service />,
     },
     {
-      path: "movies", // Correct route name
+      path: "movies",
       element: <MovieHome />,
     },
-
     {
       path: "addtocart",
       element: <AddtoCart />,
@@ -43,7 +44,6 @@ function App() {
       path: "about1/:id",
       element: <ProductDetail />,
     },
-    //service
     {
       path: "quote",
       element: <Quote />,
@@ -57,8 +57,12 @@ function App() {
       element: <ImageSearch />,
     },
     {
+      path: "todo",
+      element: <ToDo />,
+    },
+    {
       path: "*",
-      element: <Error />, // Redirect unmatched routes to Error page
+      element: <Error />,
     },
   ]);
 
@@ -67,9 +71,9 @@ function App() {
       <QuoteContextProvider>
         <WeatherContextProvider>
           <ImageContextProvider>
-            <RouterProvider router={allRoutes}>
-              {/* <Navbar /> Move Navbar inside RouterProvider if needed */}
-            </RouterProvider>
+            <ToDoContextProvider>
+              <RouterProvider router={allRoutes} />
+            </ToDoContextProvider>
           </ImageContextProvider>
         </WeatherContextProvider>
       </QuoteContextProvider>

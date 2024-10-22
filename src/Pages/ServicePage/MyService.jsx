@@ -1,6 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import Quote from "../../assets/Image/Quote.png"
+import Weather from "../../assets/Image/Weather.png"
+import Image from "../../assets/Image/Image.png"
+import todo from "../../assets/Image/todo.png"
 export default function MyService() {
   return (
     <div>
@@ -22,7 +25,7 @@ export default function MyService() {
                 <img
                   alt=""
                   className="object-cover w-full h-52 dark:bg-gray-500"
-                  src="../../../public/Image/Quote.png"
+                  src={Quote}
                 />
               </a>
               <div className="flex flex-col flex-1 p-6">
@@ -64,7 +67,7 @@ export default function MyService() {
                 <img
                   alt=""
                   className="object-cover w-full h-52 dark:bg-gray-500"
-                  src="../../../public/Image/Weather.png"
+                  src={Weather}
                 />
               </a>
               <div className="flex flex-col flex-1 p-6">
@@ -103,7 +106,7 @@ export default function MyService() {
                 <img
                   alt=""
                   className="object-cover w-full h-52 dark:bg-gray-500"
-                  src="../../../public/Image/Image.png"
+                  src={Image}
                 />
               </a>
               <div className="flex flex-col flex-1 p-6">
@@ -123,6 +126,45 @@ export default function MyService() {
                 </h3>
                 <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-600">
                   <NavLink to={"/image"}>
+                    <button
+                      type="button"
+                      className="relative px-8 py-4 ml-4 overflow-hidden font-semibold text-[17px] rounded bg-gray-800 text-gray-50"
+                    >
+                      Try It!!
+                    </button>
+                  </NavLink>
+                </div>
+              </div>
+            </article>
+            <article className="flex flex-col bg-gray-50">
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                aria-label="Te nulla oportere reprimique his dolorum"
+              >
+                <img
+                  alt=""
+                  className="object-cover w-full h-52 dark:bg-gray-500"
+                  src={todo}
+                />
+              </a>
+              <div className="flex flex-col flex-1 p-6">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="Te nulla oportere reprimique his dolorum"
+                ></a>
+                <h1
+                  rel="noopener noreferrer"
+                  className="text-xl tracking-wider uppercase hover:underline dark:text-violet-600"
+                >
+                To Do App
+                </h1>
+                <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+                 A Simple To Do Application
+                </h3>
+                <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-600">
+                  <NavLink to={"/todo"}>
                     <button
                       type="button"
                       className="relative px-8 py-4 ml-4 overflow-hidden font-semibold text-[17px] rounded bg-gray-800 text-gray-50"

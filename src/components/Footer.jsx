@@ -1,5 +1,5 @@
 import React from "react";
-
+import logoo from "../assets/Image/logoo.png"
 export default function Footer() {
   return (
     <div>
@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
               <div className="text-teal-600">
-                <img src="../../public/Image/logoo.png" alt="" />
+                <img src={logoo} alt="" />
               </div>
 
               <p className="mt-4 max-w-xs text-gray-500">
