@@ -12,12 +12,14 @@ export default function MovieNavbar() {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  <img
-                    src={Movielogo}
-                    alt="Movie Logo"
-                    width={270}
-                    className="w-[270px] sm:w-[50px] md:w-[200px] lg:w-[250px]"
-                  />
+                  <Link to={"/movies"}>
+                    <img
+                      src={Movielogo}
+                      alt="Movie Logo"
+                      width={270}
+                      className="w-[270px] sm:w-[50px] md:w-[200px] lg:w-[250px]"
+                    />
+                  </Link>
                 </span>
               </div>
               <button

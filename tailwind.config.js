@@ -9,6 +9,9 @@ export default {
   theme: {
     extend: {},
   },
+  options: {
+    safelist: ["carousel-tv-indicator"], // Add custom classes here
+  },
   plugins: [
     // require('@tailwindcss/forms'),
     require("preline/plugin"),

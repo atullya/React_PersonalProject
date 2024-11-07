@@ -90,7 +90,7 @@ export default function TabsLgBasicFullWidth() {
           aria-labelledby="tab-label-2a"
           tabIndex="-1"
         >
-   <CarouselIndicatorTV/>
+          <CarouselIndicatorTV />
         </div>
       </div>
     </section>
